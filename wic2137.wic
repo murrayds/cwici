@@ -1,0 +1,22 @@
+% simple wic program from section 2.1.3.7 page 11
+    get num
+    push 0
+    pop count
+L1  label
+    push num
+    push 0
+    sub
+    tstgt
+    jf L2
+    push num
+    push 2
+    div
+    pop num
+    push count
+    push 1
+    add
+    pop count
+    j L1
+L2  label
+    put count
+    halt

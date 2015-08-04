@@ -1,0 +1,10 @@
+% leading comment
+  % indented comment
+
+word 567
+% indent code
+   singleword
+   lonelyword % trailing comment
+   adam  eve   % trailing comment
+
+   	  columbus 1492

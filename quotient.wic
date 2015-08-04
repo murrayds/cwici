@@ -1,0 +1,58 @@
+
+#
+# program quotient
+#
+
+       get x
+       get y
+       push x
+       pop r
+       push 0
+       pop q
+       push y
+       pop w
+L1     label
+       push w
+       push r
+       sub
+       tstle
+       jf L2
+       push 2
+       push w
+       mul
+       pop w
+       j L1
+L2     label
+L3     label
+       push w
+       push y
+       sub
+       tstgt
+       jf L4
+       push q
+       push 2
+       mul
+       pop q
+       push w
+       push 2
+       div
+       pop w
+       push w
+       push r
+       sub
+       tstle
+       jf L5
+       push r
+       push w
+       sub
+       pop r
+       push q
+       push 1
+       add
+       pop q
+L5     label
+       j L3
+L4     label
+       put q
+       put r
+       halt

@@ -1,0 +1,43 @@
+
+%
+% program product
+%
+
+       get a
+       get b
+       push 0
+       pop p
+L1     label
+       push b
+       push 0
+       sub
+       tstgt
+       jf L2
+       push b
+       push b
+       push 2
+       div
+       push 2
+       mul
+       sub
+       push 0
+       sub
+       tstgt
+       jf L3
+       push p
+       push a
+       add
+       pop p
+L3     label
+       push a
+       push 2
+       mul
+       pop a
+       push b
+       push 2
+       div
+       pop b
+       j L1
+L2     label
+       put p
+       halt

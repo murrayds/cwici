@@ -1,0 +1,32 @@
+
+%
+% Program GCD
+%
+       get m
+       get n
+L1     label
+       push m
+       push n
+       sub
+       tstne
+       jf L2
+       push m
+       push n
+       sub
+       tstlt
+       jf L3
+       push n
+       push m
+       sub
+       pop n
+       j L4
+L3     label
+       push m
+       push n
+       sub
+       pop m
+L4     label
+       j L1
+L2     label
+       put m
+       halt

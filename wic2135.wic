@@ -1,0 +1,17 @@
+% simple wic program from section 2.1.3.5 page 8-9
+get A
+get B
+push A
+push B
+sub
+tstlt
+jf L1
+push B
+pop MAX
+j L2
+L1 label
+push A
+pop MAX
+L2 label
+put MAX
+halt
